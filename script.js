@@ -16,8 +16,9 @@ function toggleMute() {
 }
 
 /* ── TYPEWRITER ── */
-const TYPEWRITER_TEXT = `Dear Faustina, where do I even begin? Every year you grow more extraordinary — kinder, funnier, wiser — and yet somehow you always manage to forget just how wonderful you truly are. On this day, I want you to remember it fully and deeply: the world is genuinely better because you are in it. Your laughter is contagious, your heart is generous beyond measure, and your presence is one of the greatest gifts I could ever ask for. Here's to you — the brightest person I know. 🌸`;
-const TYPEWRITER_SIG  = `— Written with all the love in the world, from your biggest fan`;
+const TYPEWRITER_TEXT = `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga consequatur quibusdam voluptas veniam saepe unde blanditiis eius omnis, adipisci aperiam pariatur ullam est earum eveniet quae voluptate totam dolore quo?
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi cupidi`;
+const TYPEWRITER_SIG  = `— Written with all the love in the world, from your biggest fan - Osagie Faith`;
 
 let typewriterDone = false;
 
