@@ -63,7 +63,7 @@ function runTypewriter() {
   setTimeout(typeChar, 600);
 }
 //   Watches which section is in the viewport and adds .is-active,
-//   which triggers all .anim / .anim-left / .anim-right children.
+//  which triggers all .anim / .anim-left / .anim-right children.
 //   Also marks the matching nav dot. */
 const SECTION_IDS = ['hero','message','gallery','funfacts','surprise','wishes','timeline','finale'];
 const sections    = SECTION_IDS.map(id => document.getElementById(id)).filter(Boolean);
@@ -88,6 +88,7 @@ const sectionObs = new IntersectionObserver(entries => {
     if (sec.id === 'finale') setTimeout(bigConfetti, 400);
   });
 }, {
+  root: document.body,
   threshold: 0,
   rootMargin: '0px 0px -10% 0px'
 });
@@ -99,7 +100,9 @@ document.getElementById('hero')?.classList.add('is-active');
 
 /* ── NAV DOT CLICK ── */
 function scrollToSection(id) {
-  document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+  const el = document.querySelector(id);
+  if (!el) return;
+  document.body.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
 }
 
 /* ── CONFETTI ENGINE ── */
