@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Faustina 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 60% 40%, #F5C4A1 0%, #FADED0 50%, #EDB48E 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      overflow: hidden;
+    }
+
+    /* ── AMBIENT GLOW BEHIND CARD ── */
+    .glow {
+      position: absolute;
+      width: 480px; height: 580px;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #FFBF9B, #F4845F);
+      filter: blur(60px);
+      opacity: 0.4;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1);   opacity: 0.35; }
+      50%      { transform: scale(1.05); opacity: 0.5; }
+    }
+
+    /* ── CARD ── */
+    .card {
+      position: relative;
+      width: 400px;
+      height: 520px;
+      border-radius: 32px;
+      background: linear-gradient(155deg, #FFE5D4 0%, #FFBF9B 40%, #F4845F 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      cursor: pointer;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.2) inset,
+        0 32px 80px rgba(244,132,95,0.4),
+        0 8px 24px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute; inset: 0; border-radius: 32px;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.22), transparent 60%);
+      pointer-events: none;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.015);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.25) inset,
+        0 48px 100px rgba(244,132,95,0.55),
+        0 16px 40px rgba(0,0,0,0.25);
+    }
+    .card:active { transform: scale(0.98); }
+
+    /* ── ENVELOPE ICON ── */
+    .envelope-wrap {
+      position: relative;
+      margin-bottom: 36px;
+    }
+    .envelope {
+      font-size: 72px;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+      animation: float 3s ease-in-out infinite;
+      display: block;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px) rotate(-2deg); }
+      50%      { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    /* Sparkles around envelope */
+    .sparkle {
+      position: absolute;
+      font-size: 18px;
+      animation: sparkleAnim 2.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .sparkle:nth-child(1) { top: -10px; right: -18px; animation-delay: 0s; }
+    .sparkle:nth-child(2) { bottom: -8px; left: -20px; animation-delay: 0.6s; font-size: 14px; }
+    .sparkle:nth-child(3) { top: 10px;  left: -24px; animation-delay: 1.2s; font-size: 12px; }
+    @keyframes sparkleAnim {
+      0%,100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+      50%      { opacity: 1; transform: scale(1.1) rotate(20deg); }
+    }
+
+    /* ── SCRIPT HEADING ── */
+    .script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 52px;
+      color: #7C4A2D;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 12px rgba(255,255,255,0.3);
+    }
+
+    /* ── SUBTITLE ── */
+    .subtitle {
+      font-size: 15px;
+      color: rgba(90,45,15,0.72);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── CLICK RIPPLE ── */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: scale(0);
+      animation: rippleAnim 0.6s linear;
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to { transform: scale(4); opacity: 0; }
+    }
+
+    /* ── PAGE EXIT ANIMATION ── */
+    body.opening {
+      animation: pageOpen 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    @keyframes pageOpen {
+      0%   { opacity: 1; transform: scale(1); }
+      40%  { opacity: 1; transform: scale(1.04); }
+      100% { opacity: 0; transform: scale(1.12); }
+    }
+
+    /* ── BOTTOM HINT ── */
+    .bottom-hint {
+      position: absolute;
+      bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(90,45,15,0.5);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      animation: hintBlink 2.5s ease-in-out infinite;
+    }
+    @keyframes hintBlink {
+      0%,100% { opacity: 0.5; }
+      50%      { opacity: 1; }
+    }
+    .hint-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: rgba(124,74,45,0.45);
+      animation: hintBlink 2.5s ease-in-out infinite;
+    }
+    .hint-dot:nth-child(2) { animation-delay: 0.3s; }
+    .hint-dot:nth-child(3) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+
+  <div class="glow"></div>
+
+  <div class="card" id="card" onclick="openSurprise(event)">
+
+    <div class="envelope-wrap">
+      <span class="sparkle">✨</span>
+      <span class="sparkle">🌸</span>
+      <span class="sparkle">⭐</span>
+      <span class="envelope">💌</span>
+    </div>
+
+    <p class="script">Look A Website</p>
+    <p class="subtitle">Open to see what's inside</p>
+
+    <div class="bottom-hint">
+      <span class="hint-dot"></span>
+      <span class="hint-dot"></span>
+      <span class="hint-dot"></span>
+    </div>
+
+  </div>
+
+  <script>
+    function openSurprise(e) {
+      // Ripple effect at click point
+      const card   = document.getElementById('card');
+      const rect   = card.getBoundingClientRect();
+      const ripple = document.createElement('div');
+      ripple.className = 'ripple';
+      const size = Math.max(card.offsetWidth, card.offsetHeight);
+      ripple.style.cssText = `
+        width: ${size}px; height: ${size}px;
+        left: ${e.clientX - rect.left - size / 2}px;
+        top:  ${e.clientY - rect.top  - size / 2}px;
+      `;
+      card.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+
+      // Zoom-out transition then navigate
+      setTimeout(() => {
+        document.body.classList.add('opening');
+      }, 150);
+
+      setTimeout(() => {
+        window.location.href = 'birthday.html';
+      }, 950);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Faustina! 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── AUDIO ── -->
+<audio id="bg-music" loop autoplay>
+  <source src="./American Authors - Best Day Of My Life.mp3" type="audio/mpeg"/>
+</audio>
+
+<!-- ── CONFETTI CANVAS ── -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- ── MUSIC BAR ── -->
+<div id="music-bar">
+  <span id="music-icon">🎵</span>
+  <div class="music-bars">
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <button id="mute-btn" onclick="toggleMute()">Mute</button>
+</div>
+
+<!-- ── NAV DOTS ── -->
+<nav id="nav-dots" aria-label="Section navigation">
+  <button class="dot active" onclick="scrollToSection('#hero')"     title="Hero"></button>
+  <button class="dot"        onclick="scrollToSection('#message')"  title="Message"></button>
+  <button class="dot"        onclick="scrollToSection('#gallery')"  title="Gallery"></button>
+  <button class="dot"        onclick="scrollToSection('#funfacts')" title="Reasons"></button>
+  <button class="dot"        onclick="scrollToSection('#surprise')" title="Surprise"></button>
+  <button class="dot"        onclick="scrollToSection('#wishes')"   title="Wishes"></button>
+  <button class="dot"        onclick="scrollToSection('#timeline')" title="Timeline"></button>
+  <button class="dot"        onclick="scrollToSection('#finale')"   title="Finale"></button>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════
+     1. HERO
+     ══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="petal" style="left:6%;animation-duration:9s;animation-delay:0s">🌸</div>
+  <div class="petal" style="left:20%;animation-duration:12s;animation-delay:2s">🌺</div>
+  <div class="petal" style="left:36%;animation-duration:10s;animation-delay:4s">🌸</div>
+  <div class="petal" style="left:54%;animation-duration:13s;animation-delay:1s">🌼</div>
+  <div class="petal" style="left:70%;animation-duration:11s;animation-delay:3.5s">🌸</div>
+  <div class="petal" style="left:86%;animation-duration:9.5s;animation-delay:5s">🌺</div>
+
+  <div class="hero-inner">
+    <p  class="hero-eyebrow anim"  style="--delay:0.2s">To the Queen and owner of May 21ST ✨</p>
+    <h1 class="hero-name    anim"  style="--delay:0.45s">Happy<br><em>Birthday,</em><br>Oitomhen<br>Faustina<br>Rita!</h1>
+    <p  class="hero-sub     anim"  style="--delay:0.7s">You make every day brighter 🌸</p>
+    <p  class="hero-date    anim"  style="--delay:0.95s">Celebrating you — always</p>
+  </div>
+  <p class="scroll-hint">↓ scroll to explore ↓</p>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     2. PERSONAL MESSAGE
+     ══════════════════════════════════════════════════ -->
+<section id="message">
+  <div class="message-card anim-scale" style="--delay:0.15s">
+    <span class="tag">A note for you</span>
+    <p id="typewriter-text"></p>
+    <p class="message-sig" id="typewriter-sig"></p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     3. GALLERY
+     ══════════════════════════════════════════════════ -->
+<section id="gallery">
+  <h2 class="section-title anim"  style="--delay:0.1s">Our favourite moments</h2>
+  <p  class="section-sub   anim"  style="--delay:0.25s">memories that live forever</p>
+  <div class="gallery-grid">
+    <div class="gallery-item anim" style="--delay:0.2s">
+      <div class="gallery-ph"><span>📸</span><p>Favourite photo here</p></div>
+      <div class="gallery-caption">Caption goes here</div>
+    </div>
+    <div class="gallery-item anim" style="--delay:0.3s">
+      <div class="gallery-ph"><span>🌅</span><p>A beautiful memory</p></div>
+      <div class="gallery-caption">Caption goes here</div>
+    </div>
+    <div class="gallery-item anim" style="--delay:0.4s">
+      <div class="gallery-ph"><span>🎉</span><p>Party vibes only</p></div>
+      <div class="gallery-caption">Caption goes here</div>
+    </div>
+    <div class="gallery-item anim" style="--delay:0.5s">
+      <div class="gallery-ph"><span>☕</span><p>Moments</p></div>
+      <div class="gallery-caption">Caption goes here</div>
+    </div>
+    <div class="gallery-item anim" style="--delay:0.6s">
+      <div class="gallery-ph"><span>🌸</span><p>Adventures</p></div>
+      <div class="gallery-caption">Caption goes here</div>
+    </div>
+    <div class="gallery-item anim" style="--delay:0.7s">
+      <div class="gallery-ph"><span>🌊</span><p>Memories</p></div>
+      <div class="gallery-caption">Caption goes here</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     4. REASONS WE LOVE FAUSTINA
+     ══════════════════════════════════════════════════ -->
+<section id="funfacts">
+  <h2 class="section-title anim"  style="--delay:0.1s">Reasons we love Faustina</h2>
+  <p  class="section-sub   anim"  style="--delay:0.22s">just a few of many</p>
+
+  <div class="reasons-list">
+    <div class="reason-row">
+      <div class="reason-photo anim-left" style="--delay:0.25s">
+        <div class="reason-photo-ph"><span>😂</span><p>Add a photo of her laughing</p></div>
+      </div>
+      <div class="reason-text anim-right" style="--delay:0.35s">
+        <div class="reason-num">01</div>
+        <div class="reason-emoji">😂</div>
+        <div class="reason-title">Her laugh is a whole vibe</div>
+        <div class="reason-desc">One genuine Faustina laugh and suddenly everyone's laughing. It's contagious and it's medicine for the soul.</div>
+      </div>
+    </div>
+
+    <div class="reason-row flip">
+      <div class="reason-photo anim-right" style="--delay:0.25s">
+        <div class="reason-photo-ph"><span>💛</span><p>Add a photo of her showing up</p></div>
+      </div>
+      <div class="reason-text anim-left" style="--delay:0.35s">
+        <div class="reason-num">02</div>
+        <div class="reason-emoji">💛</div>
+        <div class="reason-title">She always shows up</div>
+        <div class="reason-desc">Without fail — for the hard days, the celebrations, and everything in between. Ride or die, literally.</div>
+      </div>
+    </div>
+
+    <div class="reason-row">
+      <div class="reason-photo anim-left" style="--delay:0.25s">
+        <div class="reason-photo-ph"><span>✨</span><p>Add a photo of her making magic</p></div>
+      </div>
+      <div class="reason-text anim-right" style="--delay:0.35s">
+        <div class="reason-num">03</div>
+        <div class="reason-emoji">✨</div>
+        <div class="reason-title">She makes everything better</div>
+        <div class="reason-desc">A boring Tuesday becomes an adventure. A normal meal becomes a memory. That's just her superpower.</div>
+      </div>
+    </div>
+
+    <div class="reason-row flip">
+      <div class="reason-photo anim-right" style="--delay:0.25s">
+        <div class="reason-photo-ph"><span>🌸</span><p>Add a warm, kind moment photo</p></div>
+      </div>
+      <div class="reason-text anim-left" style="--delay:0.35s">
+        <div class="reason-num">04</div>
+        <div class="reason-emoji">🌸</div>
+        <div class="reason-title">Her heart is enormous</div>
+        <div class="reason-desc">She gives so much of herself to the people she loves, often without even realising she's doing it.</div>
+      </div>
+    </div>
+
+    <div class="reason-row">
+      <div class="reason-photo anim-left" style="--delay:0.25s">
+        <div class="reason-photo-ph"><span>🔥</span><p>Add a bold, fearless photo of her</p></div>
+      </div>
+      <div class="reason-text anim-right" style="--delay:0.35s">
+        <div class="reason-num">05</div>
+        <div class="reason-emoji">🔥</div>
+        <div class="reason-title">Absolutely fearless</div>
+        <div class="reason-desc">She chases her dreams louder than anyone's doubt. Watching her go after what she wants is genuinely inspiring.</div>
+      </div>
+    </div>
+
+    <div class="reason-row flip">
+      <div class="reason-photo anim-right" style="--delay:0.25s">
+        <div class="reason-photo-ph"><span>🎯</span><p>Add an iconic Faustina photo</p></div>
+      </div>
+      <div class="reason-text anim-left" style="--delay:0.35s">
+        <div class="reason-num">06</div>
+        <div class="reason-emoji">🎯</div>
+        <div class="reason-title">Effortlessly iconic</div>
+        <div class="reason-desc">Whether dressed up or barely awake, Faustina walks in and owns the room. Every. Single. Time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     5. INTERACTIVE SURPRISE
+     ══════════════════════════════════════════════════ -->
+<section id="surprise">
+  <h2 class="section-title anim" style="--delay:0.1s">A little surprise 🎁</h2>
+  <p  class="section-sub   anim" style="--delay:0.22s">scratch the card to reveal your message</p>
+  <div id="scratch-area" class="anim-scale" style="--delay:0.35s">
+    <canvas id="scratch-canvas"></canvas>
+    <div id="scratch-reveal">
+      <div class="reveal-emoji">🌸</div>
+      <div class="reveal-msg">"The best is yet to come — and it has your name written all over it, Faustina."</div>
+    </div>
+  </div>
+  <p id="scratch-hint" class="anim" style="--delay:0.5s">✦ scratch away ✦</p>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     6. FRIENDS' WISHES
+     ══════════════════════════════════════════════════ -->
+<section id="wishes">
+  <h2 class="section-title anim" style="--delay:0.1s">Everyone loves you 💌</h2>
+  <p  class="section-sub   anim" style="--delay:0.22s">wishes from your people</p>
+  <div class="wishes-grid">
+    <div class="wish-card anim" style="--delay:0.2s">
+      <div class="wish-avatar">J</div><div class="wish-name">John</div>
+      <div class="wish-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quia quos similique neque dolor enim suscipit, nostrum nesciunt illo fugiat vero aut doloribus hic dolore facilis maiores sapiente eveniet maxime.</div>
+    </div>
+    <div class="wish-card anim" style="--delay:0.3s">
+      <div class="wish-avatar">J</div><div class="wish-name">Jane</div>
+      <div class="wish-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, laboriosam molestiae qui aliquid quos sequi est iusto odio, at ipsa inventore aperiam aspernatur nam doloribus delectus, quibusdam perspiciatis tempora voluptates!</div>
+    </div>
+    <div class="wish-card anim" style="--delay:0.4s">
+      <div class="wish-avatar">A</div><div class="wish-name">Amanda</div>
+      <div class="wish-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum blanditiis doloremque fugiat aut saepe aliquam dicta, quae praesentium dignissimos enim soluta debitis amet numquam delectus omnis libero temporibus reprehenderit. Voluptas?</div>
+    </div>
+    <div class="wish-card anim" style="--delay:0.5s">
+      <div class="wish-avatar">M</div><div class="wish-name">Mary</div>
+      <div class="wish-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, quae. Vitae dolorum excepturi aspernatur cupiditate, ratione porro earum voluptatibus consequuntur repudiandae facere accusamus est sit eaque odit. Fuga, enim facilis.</div>
+    </div>
+    <div class="wish-card anim" style="--delay:0.6s">
+      <div class="wish-avatar">F</div><div class="wish-name">Friend</div>
+      <div class="wish-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, numquam impedit! Praesentium aut cum temporibus odit incidunt, fuga quia molestiae nobis dolore voluptatum facere amet consequuntur enim tenetur laudantium hic.</div>
+    </div>
+    <div class="wish-card anim" style="--delay:0.7s">
+      <div class="wish-avatar">B</div><div class="wish-name">Bright</div>
+      <div class="wish-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eligendi excepturi itaque deserunt, nobis impedit perspiciatis voluptate tenetur officia ex molestiae quisquam laboriosam laudantium. Dolor libero inventore magnam adipisci facilis?</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     7. TIMELINE
+     ══════════════════════════════════════════════════ -->
+<section id="timeline">
+  <h2 class="section-title anim" style="--delay:0.1s">The Faustina story</h2>
+  <p  class="section-sub   anim" style="--delay:0.22s">milestones worth celebrating</p>
+  <div class="timeline-wrap">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-photo anim-left" style="--delay:0.15s">
+        <div class="tl-photo-ph"><span>👶</span><p>Add a baby photo here</p></div>
+      </div>
+      <div class="tl-content anim-right" style="--delay:0.25s">
+        <div class="tl-year">The very beginning</div>
+        <div class="tl-title">The world got brighter</div>
+        <div class="tl-desc">On this very day, Faustina arrived and everything changed for everyone lucky enough to know her.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-photo anim-right" style="--delay:0.3s">
+        <div class="tl-photo-ph"><span>🎒</span><p>School days photo here</p></div>
+      </div>
+      <div class="tl-content anim-left" style="--delay:0.4s">
+        <div class="tl-year">School days</div>
+        <div class="tl-title">Classroom legend</div>
+        <div class="tl-desc">Even back then, teachers knew she was something special. Add your favourite memory of this era here!</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-photo anim-left" style="--delay:0.45s">
+        <div class="tl-photo-ph"><span>🌍</span><p>Adventure photo here</p></div>
+      </div>
+      <div class="tl-content anim-right" style="--delay:0.55s">
+        <div class="tl-year">A big adventure</div>
+        <div class="tl-title">She went and did it</div>
+        <div class="tl-desc">That moment when she took a leap of faith and showed everyone what she was truly made of.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-photo anim-right" style="--delay:0.6s">
+        <div class="tl-photo-ph"><span>💪</span><p>Glow up era photo here</p></div>
+      </div>
+      <div class="tl-content anim-left" style="--delay:0.7s">
+        <div class="tl-year">Glow up era</div>
+        <div class="tl-title">Levelled up, unstoppable</div>
+        <div class="tl-desc">She came into her own — fully, boldly, unapologetically. The world had no idea what was coming.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-photo anim-left" style="--delay:0.75s">
+        <div class="tl-photo-ph"><span>🌸</span><p>A recent favourite photo</p></div>
+      </div>
+      <div class="tl-content anim-right" style="--delay:0.85s">
+        <div class="tl-year">Today</div>
+        <div class="tl-title">The best chapter yet</div>
+        <div class="tl-desc">Right here, right now — celebrated, loved, and ready for everything this new year brings.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     8. FINALE
+     ══════════════════════════════════════════════════ -->
+<section id="finale">
+  <div class="finale-inner">
+    <p   class="finale-small anim" style="--delay:0.1s">with all the love in the world</p>
+    <h2  class="finale-name  anim" style="--delay:0.28s">Happy<br><em>Birthday,</em><br>Faustina.</h2>
+    <p   class="finale-msg   anim" style="--delay:0.5s">
+      May this year be full of joy that catches you off guard, love that overwhelms you,
+      and moments so good they make your heart feel like it might burst.
+      You deserve every single bit of it.
+    </p>
+    <button class="finale-btn anim" style="--delay:0.7s" onclick="bigConfetti()">🎉 Celebrate again!</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
