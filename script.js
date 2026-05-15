@@ -19,7 +19,7 @@ function toggleMute() {
 const TYPEWRITER_TEXT = `  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga consequatur quibusdam voluptas veniam saepe unde blanditiis eius omnis, adipisci aperiam pariatur ullam est earum eveniet quae voluptate totam dolore quo?
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi cupiditate laboriosam distinctio veritatis. Incidunt cupiditate quia laboriosam quae delectus aperiam eaque distinctio, non quo repellat ipsa nobis blanditiis omnis eos.
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam nulla nam quibusdam accusantium iure aut cum obcaecati dolor ipsa rerum nihil tempora, maxime asperiores provident amet deleniti corporis, optio magni?`;
-const TYPEWRITER_SIG  = `— Written with all the love in the world, from your biggest fan - Osagie Faith`;
+const TYPEWRITER_SIG  = `Written with love, from your biggest fan - Osagie Faith`;
 
 let typewriterDone = false;
 
