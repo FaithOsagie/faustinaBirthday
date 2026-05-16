@@ -169,6 +169,7 @@
       color: #7C4A2D;
       line-height: 1;
       margin-bottom: 20px;
+      text-align: center;
       text-shadow: 0 2px 12px rgba(255, 255, 255, 0.3);
     }
 
@@ -314,8 +315,8 @@
       <span class="envelope">💌</span>
     </div>
 
-    <p class="script">Look A Website</p>
-    <p class="subtitle">Open to see what's inside</p>
+    <p class="script">Look...A Website For Faustina</p>
+    <p class="subtitle" id="subtitle">Click to see what's inside</p>
 
     <div class="bottom-hint">
       <span class="hint-dot"></span>
@@ -326,6 +327,12 @@
   </div>
 
   <script>
+    //Changes click to tap on mobile.
+    document.addEventListener('DOMContentLoaded', () => {
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.getElementById('subtitle').textContent = 'Tap to open your surprise…';
+      }
+    });
     function openSurprise(e) {
       // Ripple effect at click point
       const card = document.getElementById('card');
