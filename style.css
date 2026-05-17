@@ -6,7 +6,7 @@
 :root {
   --peach:        #FFBF9B;
   --peach-light:  #FFE5D4;
-  --peach-deep:   #F4845F;
+  --peach-deep:   #e07754;
   --peach-blush:  #FFF0E8;
   --cream:        #FFF8F3;
   --brown:        #7C4A2D;
@@ -511,7 +511,7 @@ img p { font-size: 11px; color: var(--text-soft); text-align: center; padding: 0
    8. FINALE
    =========================== */
 #finale {
-  background: linear-gradient(155deg, var(--peach-deep) 0%, #E8643F 50%, var(--brown) 100%);
+  background: linear-gradient(155deg, var(--peach-deep) 0%, #e98367 50%, var(--brown) 100%);
   text-align: center; padding: 80px 24px;
 }
 #finale::before {
