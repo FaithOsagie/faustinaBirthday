@@ -45,18 +45,14 @@ const TYPEWRITER_SIG  = `— Your sign-off here`;
 ```
 
 ### Adding photos to the gallery
-In `faustina_birthday.html`, find any `.gallery-ph` block and replace it with a real image:
+In `faustina_birthday.html`, find the `img` tag block and replace the src with your image
 
-```html
-<!-- Before (placeholder) -->
-<div class="gallery-ph"><span>📸</span><p>Your favourite photo here</p></div>
-
-<!-- After (real photo) -->
+<!-- Your photo -->
 <img src="your-photo.jpg" alt="Description of photo"/>
 ```
 
 ### Adding photos to the timeline / reasons sections
-Find any `.tl-photo-ph` or `.reason-photo-ph` block and replace with:
+Find `img` tag block and replace the photo there with yours:
 
 ```html
 <img src="your-photo.jpg" alt="Description"/>

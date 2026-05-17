@@ -1,6 +1,6 @@
-/* ═══════════════════════════════════════════
+/* ==================================================
    FAUSTINA BIRTHDAY — style.css
-   ═══════════════════════════════════════════ */
+   ==================================================*/
 
 /* ── TOKENS ── */
 :root {
@@ -177,9 +177,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
   padding: 6px 16px; border-radius: 50px; margin-bottom: 24px;
 }
 
-/* ═══════════════════════════
+/* ===========================
    1. HERO
-   ═══════════════════════════ */
+   =========================== */
 #hero {
   background: linear-gradient(155deg, var(--peach-blush) 0%, var(--peach-light) 55%, #FFD4B8 100%);
   text-align: center; padding: 80px 24px;
@@ -233,9 +233,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
   100% { opacity: 0; transform: translateY(102vh) rotate(380deg); }
 }
 
-/* ═══════════════════════════
+/* ===========================
    2. PERSONAL MESSAGE
-   ═══════════════════════════ */
+   =========================== */
 #message { background: var(--white); padding: 80px 24px; overflow: visible; }
 
 /* Blinking cursor shown while typing */
@@ -278,9 +278,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
   color: var(--text-soft); position: relative; z-index: 1;
 }
 
-/* ═══════════════════════════
+/* ===========================
    3. GALLERY
-   ═══════════════════════════ */
+   =========================== */
 #gallery { background: var(--peach-blush); padding: 80px 40px; }
 .gallery-grid {
   display: grid;
@@ -294,13 +294,13 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
 }
 .gallery-item:nth-child(3n+2) { aspect-ratio: 0.78; }
 .gallery-item:hover { transform: scale(1.04) rotate(0.8deg); box-shadow: 0 16px 48px rgba(124,74,45,0.14); }
-.gallery-ph {
+img {
   width: 100%; height: 100%; display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 8px;
   background: linear-gradient(135deg, var(--peach-light), #FFD4B8);
 }
-.gallery-ph span { font-size: 34px; }
-.gallery-ph p { font-size: 11px; color: var(--text-soft); text-align: center; padding: 0 12px; }
+img { font-size: 34px; }
+img p { font-size: 11px; color: var(--text-soft); text-align: center; padding: 0 12px; }
 .gallery-caption {
   position: absolute; bottom: 0; left: 0; right: 0;
   background: linear-gradient(transparent, rgba(124,74,45,0.6));
@@ -309,9 +309,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
 }
 .gallery-item:hover .gallery-caption { opacity: 1; }
 
-/* ═══════════════════════════
+/* ===========================
    4. REASONS WE LOVE FAUSTINA
-   ═══════════════════════════ */
+   =========================== */
 #funfacts { background: var(--white); padding-left: 40px; padding-right: 40px; }
 
 .reasons-list { max-width: 1000px; width: 100%; display: flex; flex-direction: column; gap: 56px; }
@@ -365,9 +365,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
   .reason-row, .reason-row.flip { grid-template-columns: 1fr; direction: ltr; gap: 24px; }
 }
 
-/* ═══════════════════════════
+/* ===========================
    5. INTERACTIVE SURPRISE
-   ═══════════════════════════ */
+   =========================== */
 #surprise {
   background: linear-gradient(155deg, #FFD4B8 0%, var(--peach) 55%, #F4845F 100%);
   text-align: center; padding: 80px 24px;
@@ -391,16 +391,16 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
 #scratch-reveal .reveal-emoji { font-size: 40px; }
 #scratch-reveal .reveal-msg {
   font-family: 'Playfair Display', serif; font-style: italic;
-  font-size: 19px; color: var(--brown); line-height: 1.5;
+  font-size: 16px; color: var(--brown); line-height: 1.5;
 }
 #scratch-hint {
   font-size: 12px; color: rgba(255,255,255,0.85);
   letter-spacing: 2px; text-transform: uppercase;
 }
 
-/* ═══════════════════════════
+/* ===========================
    6. FRIENDS' WISHES
-   ═══════════════════════════ */
+   =========================== */
 #wishes { background: var(--peach-blush); padding-left: 40px; padding-right: 40px; }
 
 .wishes-grid {
@@ -426,9 +426,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
 
 
 
-/* ═══════════════════════════
+/* ===========================
    7. TIMELINE (with photos)
-   ═══════════════════════════ */
+   =========================== */
 #timeline { background: var(--white); padding-left: 40px; padding-right: 40px; }
 
 .timeline-wrap {
@@ -507,9 +507,9 @@ section.is-active .anim-scale { opacity: 1; transform: scale(1); }
 #timeline.is-active .tl-item:nth-child(5) .anim-left,
 #timeline.is-active .tl-item:nth-child(5) .anim-right { transition-delay: 0.7s; }
 
-/* ═══════════════════════════
+/* ===========================
    8. FINALE
-   ═══════════════════════════ */
+   =========================== */
 #finale {
   background: linear-gradient(155deg, var(--peach-deep) 0%, #E8643F 50%, var(--brown) 100%);
   text-align: center; padding: 80px 24px;
